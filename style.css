@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    color : #2b2a27;
+    font-family: "Helvectica Neue","Arial","Hiragino Sans","Meiryo",sans-serif;
+    margin : 0 auto;
+}
+
+img {
+    max-width : 100%;
+}
+
+ul {
+    list-style : none;
+
+    padding-inline-start: 0px;
+
+}
+
+a {
+    color : #2b2a27;
+}
+
+/* ===================================================
+mainvisual
+=================================================== */
+/* 
+画像はbackground-imageで設定
+height : 100vhでブラウザの高さを確保
+*/
+
+#mainvisual {
+    height : 100vh;
+    background-image: url(img/meal-1246287_1920.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    margin-bottom: 80px;
+}
+
+/* 
+text
+*/
+
+.text {
+    text-align: center;
+    padding : 0 20px;
+    margin-bottom: 80px;
+}
+
+
+/* 
+ここでタイトルの下の本文と間を開ける
+*/
+.text .site-title {
+    margin-bottom : 20px;
+}
+
+
+/* 
+img
+*/
+.flex {
+    margin-bottom: 60px;
+}
+
+.flex ul {
+    display: flex;
+    list-style: none;
+    padding-inline-start: 0px;
+}
+
+/* 
+widthの幅が３当分になるように
+*/
+.flex li {
+    width : calc(100%/3);
+}
+
+
+/* 
+object-fit:画面幅に合わせて画像を新宿
+vartical-align:bottom→画像のしたにできる隙間を埋める
+*/
+.flex ul li img {
+    width : 100%;
+    height : 500px;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
+.text .btn {
+    display: inline-block;
+    border : solid 1px #2b2a27;
+    font-size: 0.875rem;
+    padding : 18px 60px;
+    border-radius: 30px;
+    text-decoration : none;
+}
+
+#footer {
+    font-size : 0.75rem;
+    padding : 20px;
+    text-align : center;
+}
+
+#footer .sns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#footer .sns li {
+    margin : 0 10px;
+}
+
+@media screen and (max-width : 834px) {
+    .flex ul {
+        flex-direction: column;
+    }
+
+    .flex li {
+        width : 100%;
+    }
+}
